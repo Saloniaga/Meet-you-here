@@ -1,23 +1,53 @@
-import logo from './logo.svg';
-import './App.css';
+// import { Route, Routes } from "react-router-dom";
+
+// import AllMeetupsPage from "./pages/AllMeetups";
+// import NewMeetupPage from "./pages/NewMeetup";
+// import FavoritesPage from "./pages/Favorites";
+// import MainNavigation from "./components/layout/MainNavigation";
+
+// function App() {
+//   return (
+//     <div>
+//       <MainNavigation />
+//       <Routes>
+//         <Route path="/" exact={true}>
+//           <AllMeetupsPage />
+//         </Route>
+//         <Route path="/new-meetup">
+//           <NewMeetupPage />
+//         </Route>
+//         <Route path="/favorites">
+//           <FavoritesPage />
+//         </Route>
+//       </Routes>
+//     </div>
+//   );
+// }
+
+// export default App;
+
+import { Route, Routes } from "react-router-dom";
+
+import AllMeetupsPage from "./pages/AllMeetups";
+import NewMeetupPage from "./pages/NewMeetup";
+import FavoritesPage from "./pages/Favorites";
+import MainNavigation from "./components/layout/MainNavigation";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <MainNavigation />
+      <Routes>
+        <Route path="/" exact>
+          <AllMeetupsPage />
+        </Route>
+        <Route path="/new-meetup">
+          <NewMeetupPage />
+        </Route>
+        <Route path="/favorites">
+          <FavoritesPage />
+        </Route>
+      </Routes>
     </div>
   );
 }
