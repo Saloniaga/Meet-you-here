@@ -8,15 +8,11 @@ function App() {
   return (
     <Layout>
       <Routes>
-        <Route path="/" exact>
-          <AllMeetupsPage />
-        </Route>
-        <Route path="/new-meetup">
-          <NewMeetupPage />
-        </Route>
-        <Route path="/favorites">
-          <FavoritesPage />
-        </Route>
+        <Route path="/" exact element={<AllMeetupsPage />} />
+
+        <Route path="/new-meetup" element={<NewMeetupPage />} />
+
+        <Route path="/favorites" element={<FavoritesPage />} />
       </Routes>
     </Layout>
   );
